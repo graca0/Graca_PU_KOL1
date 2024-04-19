@@ -19,6 +19,11 @@ namespace DAL
         {
             optionsBuilder.UseSqlServer(DbConnection.ConnectionString);
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Student>().ToTable(x => x.HasTrigger("UsuwanieStudenta"));
+            modelBuilder.Entity<Student>().ToTable(x => x.HasTrigger("AktualizacjaStudenta"));
+        }
     }
     public static class DbConnection
     {
