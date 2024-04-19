@@ -12,6 +12,8 @@ namespace BLL
         public void Create(string imie, string nazwisko, int? idgrupa = null);
         public IEnumerable<StudentResponseDTO> GetStudents();
         public StudentResponseDTO GetStudents(int id);
+        public IEnumerable<HistoriaResponseDTO> GetHistoryAll();
+        public IEnumerable<HistoriaResponseDTO> GetHistory(int page, int pageSize);
         public void Update(int id, string imie, string nazwisko, int? grupa);
         public void Delete(int id);
 

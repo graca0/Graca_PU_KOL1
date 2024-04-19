@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Graca")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c84013783b0bbc56c7fdebc28c41cf38abbc5c23")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd7e013d2d04720eab1bfa10a1b036662de48ea8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Graca")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Graca")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

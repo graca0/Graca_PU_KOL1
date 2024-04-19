@@ -20,6 +20,7 @@ namespace Graca.Controllers
         public IEnumerable<StudentResponseDTO> Get()
         {
             return _studenci.GetStudents();
+            
         }
 
         // GET api/<StucenciController>/5
@@ -28,7 +29,18 @@ namespace Graca.Controllers
         {
             return _studenci.GetStudents(id);
         }
-
+        [HttpGet("historia")]
+        public IEnumerable<HistoriaResponseDTO> GetHistory(int page, int pageSize)
+        {
+            var his = _studenci.GetHistory(page,pageSize);
+            return his;
+        }
+        [HttpGet("historiaAll")]
+        public IEnumerable<HistoriaResponseDTO> GetHistoryAll()
+        {
+            var his = _studenci.GetHistoryAll();
+            return his;
+        }
         // POST api/<StucenciController>
         [HttpPost]
         public void Post( string imie,string nazwisko, int? grupaId = null)
@@ -50,3 +62,4 @@ namespace Graca.Controllers
         }
     }
 }
+

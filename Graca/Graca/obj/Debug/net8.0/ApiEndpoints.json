@@ -127,6 +127,57 @@
     ]
   },
   {
+    "ContainingType": "Graca.Controllers.StucenciController",
+    "Method": "GetHistory",
+    "RelativePath": "api/Stucenci/historia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BLL.DTOModels.HistoriaResponseDTO, BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Graca.Controllers.StucenciController",
+    "Method": "GetHistoryAll",
+    "RelativePath": "api/Stucenci/historiaAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BLL.DTOModels.HistoriaResponseDTO, BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Graca.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

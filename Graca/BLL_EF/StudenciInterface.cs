@@ -20,11 +20,8 @@ namespace BLL_EF
 
         public void Create(string imie, string nazwisko, int? idgrupa = null)
         {
-          
-
             var student = new Student()
             {
-                
                 Imie = imie,
                 Nazwisko = nazwisko,
                 IDGrupy = idgrupa,
@@ -36,6 +33,18 @@ namespace BLL_EF
         public void Delete(int id)
         {
             dbContext.Remove(dbContext.Studenci.Where(x => x.ID == id));
+        }
+
+        public IEnumerable<HistoriaResponseDTO> GetHistory(int page, int pageSize)
+        {
+            var historia = dbContext.Historie?.Skip((page - 1) * pageSize).Take(pageSize).Select(x => new HistoriaResponseDTO(x));
+            return historia;
+        }
+
+        public IEnumerable<HistoriaResponseDTO> GetHistoryAll()
+        {
+            var historia = dbContext.Historie?.Select(x=>new  HistoriaResponseDTO(x));
+            return historia;
         }
 
         public IEnumerable<StudentResponseDTO> GetStudents()
