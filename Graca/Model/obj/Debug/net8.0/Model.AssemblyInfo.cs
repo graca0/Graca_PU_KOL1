@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Graca")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8233e0902ff38a1bb0bb6daa344cf5b18b1565f8")]
-[assembly: System.Reflection.AssemblyProductAttribute("Graca")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Graca")]
+[assembly: System.Reflection.AssemblyProductAttribute("Model")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Wygenerowane przez klasę WriteCodeFragment programu MSBuild.

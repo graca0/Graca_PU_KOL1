@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graca", "Graca\Graca.csproj", "{BDA83B36-E79E-41E9-BACA-7DA1DF33093D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{09C8F0B9-D759-4359-B9F3-233750852A40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BDA83B36-E79E-41E9-BACA-7DA1DF33093D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDA83B36-E79E-41E9-BACA-7DA1DF33093D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDA83B36-E79E-41E9-BACA-7DA1DF33093D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09C8F0B9-D759-4359-B9F3-233750852A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09C8F0B9-D759-4359-B9F3-233750852A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09C8F0B9-D759-4359-B9F3-233750852A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09C8F0B9-D759-4359-B9F3-233750852A40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
