@@ -1,0 +1,6 @@
+@Graca_HostAddress = http://localhost:5036
+
+GET {{Graca_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
