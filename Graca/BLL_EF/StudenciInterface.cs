@@ -1,9 +1,11 @@
 ﻿using BLL;
 using BLL.DTOModels;
 using DAL;
+using Microsoft.Data.SqlClient;
 using Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,16 +20,32 @@ namespace BLL_EF
             this.dbContext = dbContext;
         }
 
+        //public void Create(string imie, string nazwisko, int? idgrupa = null)
+        //{
+        //    var student = new Student()
+        //    {
+        //        Imie = imie,
+        //        Nazwisko = nazwisko,
+        //        IDGrupy = idgrupa,
+        //    };
+        //    dbContext.Add(student);
+        //    dbContext.SaveChanges();
+        //}
         public void Create(string imie, string nazwisko, int? idgrupa = null)
         {
-            var student = new Student()
+            var connectionString = DbConnection.ConnectionString;
+            using (var connection = new SqlConnection(connectionString))
             {
-                Imie = imie,
-                Nazwisko = nazwisko,
-                IDGrupy = idgrupa,
-            };
-            dbContext.Add(student);
-            dbContext.SaveChanges();
+                connection.Open();
+                using (var command = new SqlCommand("AddStudent", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@imie", imie);
+                    command.Parameters.AddWithValue("@nazwisko", nazwisko);
+                    command.Parameters.AddWithValue("@grupaId", idgrupa);
+                    command.ExecuteNonQuery();
+                }
+            }
         }
 
         public void Delete(int id)

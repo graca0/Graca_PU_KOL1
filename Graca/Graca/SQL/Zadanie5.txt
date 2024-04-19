@@ -1,0 +1,16 @@
+Zadanie 5 
+Przerób implementacjê dodawania studenta na procedurê sk³adowan¹.
+
+Procedura dodawania studenta:
+
+//////////////////////////////////////
+CREATE PROCEDURE AddStudent
+    @imie NVARCHAR(255),
+    @nazwisko NVARCHAR(255),
+    @grupaId INT = NULL
+AS
+BEGIN
+    INSERT INTO Studenci (Imie, Nazwisko, IDGrupy)
+    VALUES (@imie, @nazwisko, @grupaId)
+END
+//////////////////////////////////////

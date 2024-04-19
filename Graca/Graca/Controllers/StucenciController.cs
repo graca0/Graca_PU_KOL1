@@ -1,6 +1,8 @@
 ﻿using BLL;
 using BLL.DTOModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using System.Data;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,6 +17,7 @@ namespace Graca.Controllers
         {
             this._studenci = studenci;
         }
+
         // GET: api/<StucenciController>
         [HttpGet]
         public IEnumerable<StudentResponseDTO> Get()
@@ -43,15 +46,9 @@ namespace Graca.Controllers
         }
         // POST api/<StucenciController>
         [HttpPost]
-        public void Post( string imie,string nazwisko, int? grupaId = null)
+        public void Post(string imie, string nazwisko, int? grupaId = null)
         {
-            this._studenci.Create(imie, nazwisko, grupaId); 
-        }
-
-        // PUT api/<StucenciController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
+            this._studenci.Create(imie, nazwisko, grupaId);
         }
 
         // DELETE api/<StucenciController>/5
