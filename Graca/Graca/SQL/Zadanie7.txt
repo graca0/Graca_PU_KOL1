@@ -1,0 +1,57 @@
+Zadanie 7
+Dodaj triggera, który po ka¿dej modyfikacji wpisu w tabeli Student doda wpis do 
+tabeli Historia ze imieniem, nazwiskiem i idGrupy sprzed edycji, typem akcji edycja 
+oraz aktualn¹ dat¹. Przy usuwaniu trigger powinien wstawiæ imiê, nazwisko i idGrupy 
+usuwanego rekordu, typ akcji usuwanie oraz aktualn¹ datê.
+
+
+
+Trigger aktualizuj¹cy tabele historia po edycji danych
+//////////////////////////////////////
+CREATE TRIGGER UsuwanieStudenta
+	ON [dbo].[Studenci]
+	AFTER DELETE
+	AS
+	BEGIN
+	DECLARE @imie varchar(255)
+	DECLARE @nazwisko varchar(255)
+	DECLARE @grupa_id int
+	DECLARE @typ_akcji varchar(255)
+	DECLARE @data datetime
+
+	SELECT @imie = Imie, @nazwisko=Nazwisko, @grupa_id =IDGrupy
+	FROM deleted
+	SET @typ_akcji = 'Usuwanie' 
+	SET @data = GETDATE()
+
+	INSERT INTO Historie (Imie,Nazwisko,idGrupy,tryb_akcji,data) 
+	VALUES (@imie,@nazwisko,@grupa_id,@typ_akcji,@data)
+		
+	END
+//////////////////////////////////////
+
+
+Trigger aktualizuj¹cy tabele historia po usuniêciu studenta
+
+//////////////////////////////////////
+CREATE TRIGGER UsuwanieStudenta
+	ON [dbo].[Studenci]
+	AFTER DELETE
+	AS
+	BEGIN
+	DECLARE @imie varchar(255)
+	DECLARE @nazwisko varchar(255)
+	DECLARE @grupa_id int
+	DECLARE @typ_akcji varchar(255)
+	DECLARE @data datetime
+
+	SELECT @imie = Imie, @nazwisko=Nazwisko, @grupa_id =IDGrupy
+	FROM deleted
+	SET @typ_akcji = 'Usuwanie' 
+	SET @data = GETDATE()
+
+	INSERT INTO Historie (Imie,Nazwisko,idGrupy,tryb_akcji,data) 
+	VALUES (@imie,@nazwisko,@grupa_id,@typ_akcji,@data)
+		
+	END
+	//////////////////////////////////////

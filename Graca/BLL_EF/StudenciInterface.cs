@@ -50,7 +50,14 @@ namespace BLL_EF
 
         public void Delete(int id)
         {
-            dbContext.Remove(dbContext.Studenci.Where(x => x.ID == id));
+            var student = dbContext.Studenci?.FirstOrDefault(x => x.ID == id);
+            if (student != null)
+            {
+                dbContext.Remove(student);
+                dbContext.SaveChanges();
+                
+            }
+            
         }
 
         //public IEnumerable<HistoriaResponseDTO> GetHistory(int page, int pageSize)
@@ -94,7 +101,7 @@ namespace BLL_EF
                     return historia;
                 }
             }
-            return null;
+           
         }
 
         public IEnumerable<HistoriaResponseDTO> GetHistoryAll()
