@@ -31,7 +31,7 @@ namespace Graca.Controllers
 
         // POST api/<StucenciController>
         [HttpPost]
-        public void Post([FromBody] string imie,string nazwisko, int? grupaId = null)
+        public void Post( string imie,string nazwisko, int? grupaId = null)
         {
             this._studenci.Create(imie, nazwisko, grupaId); 
         }

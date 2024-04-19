@@ -18,3 +18,5 @@ C:\Users\Student RM4-3073 14.IT\Documents\GitHub\Graca_PU_KOL1\Graca\BLL_EF\bin\
 C:\Users\Student RM4-3073 14.IT\Documents\GitHub\Graca_PU_KOL1\Graca\BLL_EF\bin\Debug\net8.0\DAL.pdb
 C:\Users\Student RM4-3073 14.IT\Documents\GitHub\Graca_PU_KOL1\Graca\BLL_EF\bin\Debug\net8.0\Model.pdb
 C:\Users\Student RM4-3073 14.IT\Documents\GitHub\Graca_PU_KOL1\Graca\BLL_EF\obj\Debug\net8.0\BLL_EF.csproj.Up2Date
+C:\Users\Student RM4-3073 14.IT\Documents\GitHub\Graca_PU_KOL1\Graca\BLL_EF\bin\Debug\net8.0\BLL_EF.runtimeconfig.json
+C:\Users\Student RM4-3073 14.IT\Documents\GitHub\Graca_PU_KOL1\Graca\BLL_EF\obj\Debug\net8.0\BLL_EF.genruntimeconfig.cache

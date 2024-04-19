@@ -20,15 +20,11 @@ namespace BLL_EF
 
         public void Create(string imie, string nazwisko, int? idgrupa = null)
         {
-            int id;
-            if (dbContext.Studenci == null || dbContext.Studenci.Count()==0)
-                 id = 1;
-            else
-                id = dbContext.Studenci.Max(x => x.ID) + 1;
+          
 
             var student = new Student()
             {
-                ID = id,
+                
                 Imie = imie,
                 Nazwisko = nazwisko,
                 IDGrupy = idgrupa,
