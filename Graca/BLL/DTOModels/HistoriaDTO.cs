@@ -35,6 +35,7 @@ namespace BLL.DTOModels
         public string tryb_akcji { get; set; }
         public DateTime data { get; set; }
 
+        public HistoriaResponseDTO() { }
         public HistoriaResponseDTO(Historia h)
         {
             Imie = h.Imie;

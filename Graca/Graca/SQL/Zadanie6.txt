@@ -1,0 +1,21 @@
+Zadanie 6
+Przerób stronnicowane wyœwietlanie tabeli Historia na procedurê sk³adowan¹.
+
+Procedura wyswietlania tabeli histori:
+
+//////////////////////////////////////
+CREATE PROCEDURE Historia
+    @page INT,
+    @pageSize INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT
+      *
+    FROM
+        Historie
+	ORDER BY ID
+  OFFSET (@page*@pageSize) ROWS FETCH NEXT @pageSize ROWS ONLY
+
+END
+//////////////////////////////////////

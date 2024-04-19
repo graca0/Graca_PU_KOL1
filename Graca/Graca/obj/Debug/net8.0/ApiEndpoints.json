@@ -79,33 +79,6 @@
   },
   {
     "ContainingType": "Graca.Controllers.StucenciController",
-    "Method": "Put",
-    "RelativePath": "api/Stucenci/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "value",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Graca.Controllers.StucenciController",
     "Method": "Delete",
     "RelativePath": "api/Stucenci/{id}",
     "HttpMethod": "DELETE",
